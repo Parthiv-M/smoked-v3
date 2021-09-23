@@ -2,7 +2,8 @@ import React from "react";
 
 const Dummy = () => {
     return (
-        <div>Dummy here</div>
+        <h1 className="heading">Dummy heading</h1>
+        
     );
 }
 

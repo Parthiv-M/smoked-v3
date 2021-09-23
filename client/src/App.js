@@ -4,6 +4,7 @@ import routes from './config/routes';
 import AppRoute from "./AppRoutes";
 import { SmokedProvider } from './context';
 import Dummy from "./components/Dummy"
+import Credits from "./components/Credits"
 
 var __html = require("./pages/entry.html");
 var template = { __html: __html };
@@ -15,9 +16,10 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/game/firstone">
+            
               <span dangerouslySetInnerHTML={template}></span>
             </Route>
-            <Route exact path="/dummy" component={Dummy}></Route>
+            <Route exact path="/credits" component={Credits}></Route>
             {
               routes.map((route) => (
                 <AppRoute

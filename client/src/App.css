@@ -1,0 +1,41 @@
+
+/*css for mttn and almity logos*/
+div.logos{
+    position: relative;
+    margin-left: 7%;
+    padding-left: 7%;
+}
+
+/*avatar name*/
+h1.name{
+    position: absolute;
+    top:10%;
+    left: 14%;
+    padding: 10%;
+    max-width: 100%;
+    max-height: 100%;
+    font-size:200%;
+    opacity: 1;
+    visibility: hidden;
+}
+
+
+/* avatar stylings with hover */
+div.avatar{
+    position: relative;
+}
+
+img.avatar{
+    max-height:100%;
+    max-width:100%;
+    opacity: 1;
+}
+
+
+div.avatar:hover .avatar {
+    opacity: 0.3;
+  }
+  
+div.avatar:hover .name {
+    visibility: visible;
+  }
