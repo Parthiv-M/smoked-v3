@@ -34,8 +34,39 @@ img.avatar{
 
 div.avatar:hover .avatar {
     opacity: 0.3;
-  }
+}
+
   
+
 div.avatar:hover .name {
     visibility: visible;
   }
+  
+/*background smoke animation effect*/
+
+  div.main{
+    background: url("https://res.cloudinary.com/da51wkm4r/image/upload/v1461143297/title/smoke.png"),url("https://res.cloudinary.com/da51wkm4r/image/upload/v1461143297/title/smoke.png");
+    background-repeat: no-repeat,no-repeat;
+    background-position: bottom left,0%;
+    background-size: 120%,120%;
+    animation: tran infinite 14s linear,tran infinite 13s linear;
+  }
+  
+  @keyframes tran {
+    100% {background-position: top left,top right;}
+  }
+
+  section.first{
+    background: url("https://res.cloudinary.com/da51wkm4r/image/upload/v1461143297/title/smoke.png"),url("https://res.cloudinary.com/da51wkm4r/image/upload/v1461143297/title/smoke.png");
+    background-repeat: no-repeat;
+    background-position: center,bottom left;
+    background-size: 100%,100%;
+    animation: transec infinite 10s linear,transec infinite 11s linear;
+    animation-delay: 0s,3s;
+  }
+  
+  @keyframes transec {
+    100% {background-position: top,top left;}
+  }
+  
+
