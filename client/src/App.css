@@ -47,26 +47,26 @@ div.avatar:hover .name {
   div.main{
     background: url("https://res.cloudinary.com/da51wkm4r/image/upload/v1461143297/title/smoke.png"),url("https://res.cloudinary.com/da51wkm4r/image/upload/v1461143297/title/smoke.png");
     background-repeat: no-repeat,no-repeat;
-    background-position: bottom left,0%;
+    background-position: 0 150%,50% 125%;
     background-size: 120%,120%;
-    animation: tran infinite 14s linear,tran infinite 13s linear;
+    animation: tran infinite 54s linear,tran infinite 47s linear;
+    overflow: hidden;
   }
   
   @keyframes tran {
-    100% {background-position: top left,top right;}
+    100% {background-position: 100% -100%,100% -100%;}
   }
 
   section.first{
-    background: url("https://res.cloudinary.com/da51wkm4r/image/upload/v1461143297/title/smoke.png"),url("https://res.cloudinary.com/da51wkm4r/image/upload/v1461143297/title/smoke.png");
+    background: url("https://res.cloudinary.com/da51wkm4r/image/upload/v1461143297/title/smoke.png"),url("https://res.cloudinary.com/da51wkm4r/image/upload/v1461143297/title/smoke.png"),url("https://res.cloudinary.com/da51wkm4r/image/upload/v1461143297/title/smoke.png");
     background-repeat: no-repeat;
-    background-position: center,bottom left;
-    background-size: 100%,100%;
-    animation: transec infinite 10s linear,transec infinite 11s linear;
-    animation-delay: 0s,3s;
+    background-position: 50% 115%,0% 100%,0% 130%;
+    background-size: 120%,120%,120%;
+    animation: transec infinite 43s linear,transec infinite 36s linear,transec infinite 39s linear;
   }
   
   @keyframes transec {
-    100% {background-position: top,top left;}
+    100% {background-position: 50% -100%,0% -100%,0% -100%;}
   }
   
 
