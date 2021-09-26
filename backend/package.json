@@ -11,13 +11,16 @@
   "author": "Parthiv Menon",
   "license": "ISC",
   "dependencies": {
+    "avatar-builder": "^1.0.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-validator": "^6.12.1",
     "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
     "mongoose": "^6.0.5",
+    "nanoid": "^3.1.25",
     "nconf": "^0.11.3"
   },
   "devDependencies": {

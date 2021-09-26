@@ -1,4 +1,7 @@
 const jwt = require('jsonwebtoken');
+const nconf = require('nconf');
+
+nconf.argv().env().file({ file: 'utils/config.json' });
 
 module.exports = function (req, res, next) {
   // get token from the header
@@ -9,7 +12,7 @@ module.exports = function (req, res, next) {
   }
   
   try {
-    const decode = jwt.verify(token, process.env.JWT_SECRET);
+    const decode = jwt.verify(token, nconf.get("JWT_SECRET"));
     req.user = decode.user;
     next();
   } catch (err) {

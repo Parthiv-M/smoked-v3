@@ -54,6 +54,10 @@ const User = new Schema({
     level: Number,
     userAnswer: String,
     isCorrect: Boolean
+  }],
+  leaderplot: [{
+    time: Date,
+    score: Number
   }]
 });
 

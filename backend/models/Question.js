@@ -28,10 +28,13 @@ const Question = new Schema({
         isImage: Boolean,
         isVideo: Boolean,
         isAudio: Boolean,
-        hint: String
+        isString: Boolean,
+        isLocked: Boolean,
+        hint: String,
     }],
     points: {
-        type: Number
+        type: Number,
+        required: true
     }
 });
 
