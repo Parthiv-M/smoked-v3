@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;    
+}
+body{
+    height:100%;
+}
+#Sidebar{
+    background-color:black;
+    float:right;
+    width:40%;
+    height:100%;
+    padding:30px;
+    overflow:hidden;    
+}
+#heading{
+    color:white;
+    font-size:35px;
+    display:grid;
+    align-items:center;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.2rem;
+    text-decoration:underline #660885;
+    text-underline-offset:5px;
+    margin-bottom:20px;    
+}
+#heading::before,
+#heading::after{
+    content:"";
+    display:block;
+    height:2px;
+    background-color:grey;
+}
+#sub-headings{
+    color:#660885;
+    font-size:35px;
+    display:grid;
+    text-decoration:underline grey;
+    text-underline-offset: 5px;
+    text-align:left;
+    margin-bottom:10px;
+    grid-template-columns: max-content max-content;
+    align-items:center;
+    grid-column-gap:1.2rem;   
+}
+#sub-headings::after{
+    content:"";
+    display:block;
+    height:2px;
+    background-color:#660885;
+    width:7em;
+    height:2px;
+}
+#para{
+    color:white;
+    font-size:25px;
+    padding-left:20px;
+}
+#p1{
+    padding-bottom:20px;
+    font-size:25px;
+}
+#p2{
+    color:#660885;
+    word-wrap:break-word;
+}
+@media only screen and (max-width: 400px){
+    #Sidebar{
+        width:70%;
+        padding:20px;
+    }
+    #heading,#sub-headings{
+        font-size:20px;
+        margin-bottom:10px;
+    }
+    #sub-headings::after{
+        width:3em;
+    }
+    #para{
+        font-size:16px;
+        padding-left:10px;
+    }
+    #p1{
+        padding-bottom:10px;
+        font-size:16px;
+    }
+}
+@media only screen and (min-width: 401px) and (max-width: 960px){
+    #heading,#sub-headings{
+        font-size: 20px;
+        margin-bottom:10px;
+    }
+    #para{
+        font-size:16px;
+        padding-left:10px;
+    }
+    #p1{
+        padding-bottom:10px;
+        font-size:16px;
+    }
+    #Sidebar{
+        width:70%;
+    }
+    #sub-headings::after{
+        width:3em;
+    }
+}
