@@ -1,0 +1,69 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html, 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0F0E0E;
+}
+
+button:focus {
+  outline: none
+}
+
+.lora-bold {
+  font-family: "Lora", serif;
+  font-weight: 700;
+}
+
+.lora-regular {
+  font-family: "Lora", serif;
+  font-weight: 100;
+}
+
+/* team card styling */
+
+.name-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  visibility: hidden;
+}
+
+.name {
+  font-size: 1.5rem;
+}
+
+.avatar-wrapper:hover .name {
+  visibility: visible;
+}
+
+.avatar-wrapper:hover .avatar {
+  filter: brightness(20%);
+  transition-duration: 800ms;
+}
+
+.mist-logo {
+  width: 25%;
+}
+
+.link-bar a{
+  color: white;
+}
+
+.link-bar > a:hover {
+  color: #7027CE;
+}
+
+@media only screen and (max-width: 800px) {
+  .mist-logo {
+    width: 40%;
+  }
+}

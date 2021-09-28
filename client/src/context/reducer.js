@@ -2,8 +2,13 @@ let token = localStorage.getItem("token")
   ? localStorage.getItem("token")
   : "";
 
+let score = localStorage.getItem("score")
+  ? localStorage.getItem("score")
+  : "";
+
 export const initialState = {
   token: token,
+  score: score
 };
  
 export const AuthReducer = (initialState, action) => {
