@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import routes from './config/routes';
 import AppRoute from "./AppRoutes";
 import { SmokedProvider } from './context';
-import Dummy from "./components/Dummy"
+import StatsGraph from "./components/StatsGraph"
 
 var __html = require("./pages/entry.html");
 var template = { __html: __html };
@@ -17,7 +17,7 @@ function App() {
             <Route exact path="/game/firstone">
               <span dangerouslySetInnerHTML={template}></span>
             </Route>
-            <Route exact path="/dummy" component={Dummy}></Route>
+            <Route exact path="/stats" component={StatsGraph}></Route>
             {
               routes.map((route) => (
                 <AppRoute

@@ -13,12 +13,14 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "bootstrap": "^5.1.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-validator": "^6.12.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.5",
-    "nconf": "^0.11.3"
+    "nconf": "^0.11.3",
+    "react-bootstrap": "^1.6.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
