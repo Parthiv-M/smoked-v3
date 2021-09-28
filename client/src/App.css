@@ -1,0 +1,93 @@
+.bg{
+    width: 90vw;
+    height: 100vh;
+    padding: 2rem 6rem;
+    background: url(./images/bg.png) no-repeat center fixed, #000000;
+    font-family: 'Lora', serif;
+}
+.logo{
+    width: 10rem;
+}
+.title_section{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0rem;
+
+}
+.line1{
+    height: 1px;
+    width: 10%;
+    background-color: white;
+}
+.line2{
+    height: 1px;
+    width: 75%;
+    background-color: white;
+}
+.title{
+    font-size: 1.5rem;
+    color: white;
+    padding: 0rem 0.5rem;
+    text-decoration: underline #7027CE;
+}
+
+.acc-header{
+    background-color: #251D1D !important;
+    border-bottom: 1px solid white !important;
+    color: white !important;
+    
+}
+.MuiAccordionSummary-content {
+    
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+
+}
+.container{
+    width: 40%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.acc-details{
+    background-color: #251D1D ;
+    color: white ;
+}
+.accordian{
+    margin-top: 1rem;
+    width: 30rem;
+}
+.bottom{
+    color: white;
+    padding-top: 8rem;
+    font-size: 1.2rem;
+    display: flex;
+}
+.solves span{
+    color: #7027CE;
+    padding-left: 1rem;
+}
+.first span{
+    color: #7027CE;
+    padding-left: 1rem;
+}
+.first{
+    padding-left: 11.5rem;
+}
+.mainbody{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 600px ) {
+    .mainbody{
+        flex-direction: column;
+        justify-content: flex-start;
+
+    }
+    
+}
