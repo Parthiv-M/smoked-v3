@@ -3,8 +3,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import hulk from "./Images/hulk.png";
 import almity from "./Images/allmity.png";
 import mttn from "./Images/mttn.png";
-import vector from "./Images/Vectorline.png"
-import mist from "./Images/Mistlogo.png"
+import vector from "./Images/Vectorline.png";
+import mist from "./Images/Mistlogo.png";
 
 
 const Credits= ()=>{

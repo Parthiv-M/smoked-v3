@@ -5,6 +5,7 @@ import AppRoute from "./AppRoutes";
 import { SmokedProvider } from './context';
 import Dummy from "./components/Dummy"
 import Credits from "./components/Credits"
+import groundZero from './components/GroundZero';
 
 var __html = require("./pages/entry.html");
 var template = { __html: __html };
@@ -19,7 +20,7 @@ function App() {
             
               <span dangerouslySetInnerHTML={template}></span>
             </Route>
-            <Route exact path="/credits" component={Credits}></Route>
+            <Route exact path="/ground" component={groundZero}></Route>
             {
               routes.map((route) => (
                 <AppRoute
