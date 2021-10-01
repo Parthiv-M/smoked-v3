@@ -1,0 +1,30 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color:black;
+    color: white;
+}
+
+
+
+  /* img{
+    height: 40%;
+    width: 60%;
+}   */
+
+/* 
+.box1.abc{
+    align-items: left;
+} */
+
+
+
+.space{
+    padding: 4rem;
+}
+
+
+
+.button{
+    background-color: purple;
+}

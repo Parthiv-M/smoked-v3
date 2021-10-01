@@ -4,7 +4,7 @@ import check2 from "./client/check2";
 import logo from "./client/mist";
 import smoked from "./client/smoked";
 import pic2 from "./client/pic2";
-
+import "./cliet/style.css "
 const entry_html = () => {
   return (
     <div className="wrapper">
