@@ -1,17 +1,26 @@
 {
   "name": "smoked-v3",
   "version": "1.0.0",
-  "description": "",
+  "description": "The repository for the third version of the Smoked website for Manipal Information Security Team",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "backend" : "cd backend && yarn start",
-    "client" : "cd client && yarn start",
+    "backend": "cd backend && yarn start",
+    "client": "cd client && yarn start",
     "dev-start": "NODE_ENV=dev concurrently \"npm run backend\" \"npm run client\""
   },
   "author": "Parthiv Menon",
   "license": "ISC",
   "dependencies": {
     "concurrently": "^6.2.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Parthiv-M/smoked-v3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Parthiv-M/smoked-v3/issues"
+  },
+  "homepage": "https://github.com/Parthiv-M/smoked-v3#readme"
 }
