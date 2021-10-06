@@ -1,0 +1,128 @@
+/* team card styling */
+
+.name-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  visibility: hidden;
+}
+
+.name {
+  font-size: 1.5rem;
+}
+
+.avatar-wrapper:hover .name {
+  visibility: visible;
+}
+
+.avatar-wrapper:hover .avatar {
+  filter: brightness(20%);
+  transition-duration: 800ms;
+}
+
+.mist-logo {
+  width: 25%;
+}
+
+.link-bar a{
+  color: white;
+}
+
+.link-bar > a:hover {
+  color: var(--primary-color);
+}
+
+@media only screen and (max-width: 800px) {
+  .mist-logo {
+    width: 40%;
+  }
+}
+
+/* game page cards styling */
+
+.game-card {
+  background-color: #251d1dcc;
+  border-radius: 1rem;
+}
+
+.progress-bar {
+  background-color: var(--primary-color)!important;
+}
+
+.question-card {
+  min-height: 71vh;
+}
+
+/* hints accordian styling */
+
+.hint {
+  width: 75%
+}
+
+.hint-item {
+  background-color: #251D1D!important;
+  border-radius: 0.8rem!important;
+}
+
+.accordion-button {
+  color: white;
+  border-radius: 0.8rem!important;
+  background-color: #251D1D!important;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:not(.collapsed) {
+  border-top-left-radius: 0.8rem!important;
+  border-top-right-radius: 0.8rem!important;
+  border-bottom-right-radius: 0!important;
+  border-bottom-left-radius: 0!important;
+  border-bottom: 0.1px solid white;
+  color: var(--primary-color)!important;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .hint {
+    width: 100%;
+  }
+}
+
+/* scrollbar for ground zero */
+
+.scroll-zero {
+  overflow-y: scroll;
+}
+
+.scroll-zero::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scroll-zero::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.185);
+  border-radius: 10px;
+}
+
+/* Handle */
+.scroll-zero::-webkit-scrollbar-thumb {
+  background: var(--primary-color); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.scroll-zero::-webkit-scrollbar-thumb:hover {
+  background: #9362d3; 
+}

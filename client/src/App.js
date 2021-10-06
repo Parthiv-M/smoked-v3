@@ -4,6 +4,7 @@ import routes from './config/routes';
 import AppRoute from "./AppRoutes";
 import { SmokedProvider } from './context';
 import Dummy from "./components/Dummy"
+import "./styles/global.css"
 
 var __html = require("./pages/entry.html");
 var template = { __html: __html };
