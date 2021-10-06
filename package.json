@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "backend" : "cd backend && yarn start",
-    "client" : "cd client && yarn start",
+    "backend": "cd backend && yarn start",
+    "client": "cd client && yarn start",
     "dev-start": "NODE_ENV=dev concurrently \"npm run backend\" \"npm run client\""
   },
   "author": "Parthiv Menon",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^6.2.1"
+    "concurrently": "^6.2.1",
+    "react-perfect-scrollbar": "^1.5.8"
   }
 }

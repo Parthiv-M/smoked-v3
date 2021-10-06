@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import routes from './config/routes';
 import AppRoute from "./AppRoutes";
 import { SmokedProvider } from './context';
-import Dummy from "./components/Dummy"
+import Announcements from "./components/Announcements"
+import { Scrollbars } from 'react-custom-scrollbars'
 
 var __html = require("./pages/entry.html");
 var template = { __html: __html };
@@ -17,7 +18,7 @@ function App() {
             <Route exact path="/game/firstone">
               <span dangerouslySetInnerHTML={template}></span>
             </Route>
-            <Route exact path="/dummy" component={Dummy}></Route>
+            <Route exact path="/Announcements" component={Announcements}></Route>
             {
               routes.map((route) => (
                 <AppRoute
@@ -31,7 +32,11 @@ function App() {
           </Switch>
         </Router>
       </SmokedProvider>
-    </div>
+
+      <Announcements >     </Announcements>
+
+
+    </div >
   );
 }
 
