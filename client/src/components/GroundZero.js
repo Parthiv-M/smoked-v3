@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import incognito from './Images/incognito.png';
 import smoked from './Images/Smoked.png';
 import mist from './Images/Mistlogo.png';
+import OffCanvasExample from "./Sidetrial.js";
 
 
 
@@ -12,6 +13,11 @@ const groundZero=()=>{
         background: "#251D1D",
         opacity: "100%",
         borderRadius: "10px",
+        height:"90%",
+        width:"99%",
+        top:"0",
+        left:"5.5%",
+        transition:"0.5s",
         
         overflow:"scroll",
         
@@ -73,7 +79,7 @@ const groundZero=()=>{
 
     const pointStyle={
         width:"8%",
-        left:"85%",
+        left:"90%",
         borderRadius:"20px"
     }
     //Game container style
@@ -83,7 +89,8 @@ const groundZero=()=>{
 
 
     return(
-        <div className="container zero position-absolute px-3" style={zeroStyle}>
+        <div className="container zero position-absolute px-3" id="zero" style={zeroStyle}>
+
             <div className="row d-flex">
 
                 <div className="col-2">

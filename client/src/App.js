@@ -6,6 +6,8 @@ import { SmokedProvider } from './context';
 import Dummy from "./components/Dummy"
 import Credits from "./components/Credits"
 import groundZero from './components/GroundZero';
+import Side from "./components/Sidetrial"
+
 
 var __html = require("./pages/entry.html");
 var template = { __html: __html };
@@ -13,6 +15,7 @@ var template = { __html: __html };
 function App() {
   return (
     <div className="App">
+    
       <SmokedProvider>
         <Router>
           <Switch>
@@ -20,7 +23,7 @@ function App() {
             
               <span dangerouslySetInnerHTML={template}></span>
             </Route>
-            <Route exact path="/ground" component={groundZero}></Route>
+            <Route exact path="/sidebar" component={Side}></Route>
             {
               routes.map((route) => (
                 <AppRoute

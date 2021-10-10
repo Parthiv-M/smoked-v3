@@ -68,5 +68,20 @@ div.avatar:hover .name {
   @keyframes transec {
     100% {background-position: 50% -100%,0% -100%,0% -100%;}
   }
+
+ /*link colors for sidebar*/ 
+
+p.linkp{
+  color:white;
+  font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif
+}
+
+p.linkp:hover {
+  color: rgba(112, 39, 206, 1);
+}
+p.linkp:active {
+  color: rgba(112, 39, 206, 1);
+
+}
   
 
