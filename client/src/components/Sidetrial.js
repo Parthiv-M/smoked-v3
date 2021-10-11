@@ -58,7 +58,7 @@ const Side=()=> {
     const linkStyle={
         fontSize:"25px",
         textDecoration:"none",
-        transition:"0.5s",
+        transition:"0.7s",
         visibility:"visible",
         padding:"0",
     }
@@ -67,7 +67,7 @@ const Side=()=> {
     const SocialStyle={
         fontSize:"15px",
         textDecoration:"none",
-        transition:"0.5",
+        transition:"0.7",
     }
 
     const imageStyle={
