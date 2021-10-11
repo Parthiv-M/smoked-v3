@@ -126,3 +126,49 @@
 .scroll-zero::-webkit-scrollbar-thumb:hover {
   background: #9362d3; 
 }
+
+/* main sidebar */
+
+.dashboard {
+  overflow-x: hidden;
+  width: 22%;
+  display: grid;
+  grid-template-columns: 7% 93%;
+  transition-duration: 800ms;
+  transition-timing-function: ease-in-out;
+}
+
+.dash-col-1 {
+  background-color: transparent;
+}
+
+.dash-col-2 {
+  background-color: #0F0E0E!important;
+}
+
+.trapezium {
+  background-color: white;
+  opacity: 40%;
+  height: 200px;
+  width: 180px;
+  clip-path: polygon(0 8%, 17% 0, 17% 100%, 0 91%);
+  position: absolute;
+  top: 36%;
+  cursor: pointer;
+}
+
+.link-bar a {
+  color: rgb(54, 54, 54);
+}
+
+.link-bar a:hover {
+  transform: scale(1.07);
+}
+
+@media only screen and (max-width: 800px) {
+  .dashboard {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 10% 90%;
+  }
+}

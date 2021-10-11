@@ -10,10 +10,22 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 :root {
   --primary-color: #7027CE;
+}
+
+/* selection customisation */
+::-moz-selection {
+  background-color: #6f27ced2;
+  color: white;
+}
+
+::selection {
+  background-color: #6f27ced2;
+  color: white;
 }
 
 body {

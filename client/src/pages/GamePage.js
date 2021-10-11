@@ -1,6 +1,7 @@
 import React, { useEffect, useParams } from "react";
 import GameArea from "../components/GameArea";
 import GroundZero from "../components/GroundZero";
+import MainSideBar from "../components/MenuSideBar";
 import ProfileBar from "../components/ProfileBar";
 import video from "./../assets/smoked_back.mp4"
 
@@ -15,12 +16,13 @@ const GamePage = ({groundZeroComp}) => {
 
     return (
         <div className="pr-md-2 pr-0" style={{ height: "100vh", width: "100vw", overflowX: "hidden" }}> 
+            <MainSideBar />
             <div className="h-100 w-100 position-absolute" style={{ opacity: 0.7 }}>
                 <video id="video" className="h-100 w-100 position-absolute" style={{ objectFit: "cover" }} autoPlay muted loop>
                     <source src={video} type="video/mp4"></source>
                 </video>
             </div>
-            <div className="w-full h-100 row">
+            <div className="w-full row">
                 {/* levels sidebar */}
                 <div className="col-2 d-md-block d-none" style={{ backgroundColor: "#251D1D" }}></div>
                 <div className="col-md-10 col-12 d-flex flex-column h-100">
