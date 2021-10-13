@@ -3,6 +3,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Button,  Breadcrumb, BreadcrumbItem, Container, Row, Col,ProgressBar} from "react-bootstrap"
 import {Card, CardImg,} from "react-bootstrap"
+import{Line} from 'react-chartjs-2'
 
 const style = {
     position: "absolute",
@@ -39,11 +40,12 @@ const styleScore = {
 const styleGraph = {
     position: "relative",
     width: "730px",
-    height: "200px",
+    height: "220px",
     left: "30px",
-    top: "34px",
+    top: "25px",
+    backgroundColor:" #000000"  ,
 
-    backgroundColor: "white",
+   
     opacity: "",
     borderRadius: "15px"
     
@@ -60,15 +62,16 @@ const styleSpan ={
 
 };
 const styleBar={
-    backgroundColor:" #FFFFFF" , 
+    backgroundColor:" #000000" , 
     width: "150px",
     height: "8px",
     position:"relative",
     left:"18px",
     top:"20px",
-    color:"#7027CE"  
+    color:"#000000"  
 
 };
+
 const StatsGraph = () => {
     return (
         <div>
@@ -88,6 +91,57 @@ const StatsGraph = () => {
                         </Col>
                         <Col xs={7}>
                             <Card style={styleGraph}>
+                                <Line
+                                     data={{
+                                         labels:['1', '2', '3', '4', '5', '6','7', '8', '9', '10', '11', '12'],
+                                         datasets:[{
+                                             label:'Top Score',
+                                             data:['1', '2', '3', '4', '5', '6','7', '8', '9', '10', '11', '12'],
+                                             backgroundColor:[
+                                                'white'
+                                             ],
+                                             borderColor:[
+                                                'white'
+                                             ],
+                                             
+                                             borderWidth: 1
+                                            
+                                         },
+                                         {
+                                             label:'My Score',
+                                             data:['1',  '3', '4', '5', '6','7', '8', '9', '10', '11', '12','13'],
+                                             backgroundColor:[
+                                                 'purple'
+                                                ],
+                                                borderColor:[
+                                                    'purple'
+                                                ],
+                                            },
+                                            {
+                                                label:'Average Score',
+                                                data:['1', '4', '5', '6','7', '8', '9', '10', '11', '12','13','14'],
+                                                backgroundColor:[
+                                                    'white'
+                                                 ],
+                                                 borderColor:[
+                                                    'white'
+                                                 ]
+                                            },
+                                        ]
+                                     }}                             
+                                     Height={400}
+                                     width={600} 
+                                     options={{
+                                         maintainAspectRatio:false,
+                                         scales: {
+                                            y: {
+                                               title: true,
+                                               Text:' #time passed'
+                                            }
+                                        }
+                                     }}  
+        
+                                />
 
                             </Card>
                         </Col>
