@@ -3,8 +3,11 @@ import "./Loader.css"
 
 const MainLoader = () => {
     return (
-        <div className="">
-
+        <div className="lds-ring mx-auto">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
     )
 }

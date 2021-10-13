@@ -172,3 +172,9 @@
     grid-template-columns: 10% 90%;
   }
 }
+
+/* charts customisation */
+
+.apexcharts-toolbar {
+  display: none;
+}

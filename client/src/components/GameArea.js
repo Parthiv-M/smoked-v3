@@ -27,7 +27,7 @@ const GameArea = () => {
                   {/* if image */}
                   {/* <img className="w-75" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1n8TDX1XKcHfycG-QVaGrM5gyyEJ7luh0hKlZJjP2qfkr32jtxzpgfWDR-kFjjVKHiy8&usqp=CAU"/> */}
               </div>
-              <div className="col-md-5 col-12 d-flex flex-column justify-content-center align-items-center scrollable-hints scroll-zero" style={{ height: "400px", overflowY: "scroll" }}>
+              <div className="col-md-5 col-12 d-flex flex-column justify-content-center align-items-center scroll-zero" style={{ height: "400px", overflowY: "scroll" }}>
                   <div className="d-flex flex-column align-items-md-start align-items-center w-100 my-4">
                       <p className="m-0 display-4 lora-regular" style={{ color: "#7027CE" }}>1234</p>
                       <p className="text-white lora-bold" style={{ fontSize: "1.3rem" }}>Total Solves</p>

@@ -22,7 +22,7 @@ const MainSideBar = () => {
     }, [])
 
     return (
-        <div className="h-100 position-absolute dashboard" id="dash" style={{ zIndex: 1000, right: 0 }}>
+        <div className="h-100 position-fixed dashboard" id="dash" style={{ zIndex: 1000, right: 0 }}>
             <div className="dash-col-1">
                 <div className="trapezium" onClick={handleClick}></div>
             </div>

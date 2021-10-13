@@ -1,6 +1,6 @@
 import React from "react";
 import { ProgressBar } from "react-bootstrap";
-import MainLoader from "./Loader/MainLoader";
+import StatsGraph from "./StatsGraph";
 
 const ProfileBar = () => {
     return (
@@ -17,8 +17,8 @@ const ProfileBar = () => {
                     </div>
                     <ProgressBar striped animated className="w-75 my-progress" now={60}/>
                 </div>
-                <div className="col-md-6 col-12">
-                    <MainLoader />
+                <div className="col-md-6 col-12 my-md-0 mt-4">
+                    <StatsGraph />
                 </div>
             </div>
         </div>
