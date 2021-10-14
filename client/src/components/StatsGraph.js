@@ -1,155 +1,92 @@
-import React from 'react'
+import React from "react"
+import ReactApexCharts from 'react-apexcharts'
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-import {Button,  Breadcrumb, BreadcrumbItem, Container, Row, Col,ProgressBar} from "react-bootstrap"
-import {Card, CardImg,} from "react-bootstrap"
-import{Line} from 'react-chartjs-2'
+const data = [
+    {
+      name: 'You',
+      data: [31, 40, 28, 51, 42, 109, 100]
+    }, 
+    {
+      name: 'Winner',
+      data: [11, 32, 45, 32, 34, 52, 41]
+    },
+    {
+      name: 'Average',
+      data: [26.5, 52, 50.5, 57.5, 106.5, 53, 70]
+    }
+]
 
-const style = {
-    position: "absolute",
-    width: "1430px",
-    height: "252px",
-    left: "30px",
-    top: "754px",
-
-    backgroundColor: "#251D1D",
-    opacity: "",
-    borderRadius: "15px",
-    color:"white"
-  };
-const styleTitle = {
-    position: "relative",
-    top: "60px",
-    fontSize: "50px"
-
-};
-const styleLevel = {
-    position: "relative",
-    top: "19px",
-    fontSize: "20px",
-    left: "160px"
-
-};
-const styleScore = {
-    position: "relative",
-    top: "65px",
-    fontSize: "20px",
-    left: "20px"
-
-};
-const styleGraph = {
-    position: "relative",
-    width: "730px",
-    height: "220px",
-    left: "30px",
-    top: "25px",
-    backgroundColor:" #000000"  ,
-
-   
-    opacity: "",
-    borderRadius: "15px"
-    
-};
-const styleImage ={
-
-    borderRadius:"50%",
-    position: "relative",
-    top:"20px",
-    left:"20px"
-};
-const styleSpan ={
-    color:" #7027CE"  
-
-};
-const styleBar={
-    backgroundColor:" #000000" , 
-    width: "150px",
-    height: "8px",
-    position:"relative",
-    left:"18px",
-    top:"20px",
-    color:"#000000"  
-
-};
+const options = {
+    legend: {
+        show: true,
+        markers: {
+            fillColors: ["#7027CE", "#ffffff", "#000000"]
+        },
+        labels: {
+            colors: ["#7027CE", "#ffffff", "#1f1f1f"]
+        },
+        position: "top",
+        horizontalAlign: "left"
+    },
+    chart: {
+      height: 185,
+      type: 'area'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth',
+      colors: ["#7027CE", "#ffffff", "#000000"]
+    },
+    fill: {
+      colors: ["#7027CE", "#ffffff", "#1f1f1f"]
+    },
+    xaxis: {
+        labels: {
+            show: false
+        },  
+        title: {
+            text: "Time",
+            style: {
+                color: "#ffffff",
+                fontWeight: 300
+            },
+            offsetX: 340
+        },
+        type: 'datetime',
+        categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+    },
+    tooltip: {
+        enabled: false
+    },
+    yaxis: {
+        labels: {
+            show: false
+        },
+        title: {
+            text: "Score",
+            style: {
+                color: "#ffffff",
+                fontWeight: 300,
+            },
+            offsetY: -40,
+            offsetX: 10
+        }
+    }
+}
 
 const StatsGraph = () => {
     return (
-        <div>
-            <Container fluid="lg">
-                <Card style={style} >
-                    <Row>
-                        <Col xs={2}>
-                            <Card.Img style={styleImage} src="https://source.unsplash.com/200x200/?nature,water" />
-                        </Col>
-                        <Col xs={3}>
-                            <Card.Body>
-                                <Card.Title style={styleTitle}> Orkin King</Card.Title>
-                                <Card.Text style={styleScore}>Score:  <span style={styleSpan}>  420</span></Card.Text>
-                                <Card.Text style={styleLevel}>Level:  <span style={styleSpan}>  69</span></Card.Text>
-                                <ProgressBar style={styleBar} now={60} />
-                            </Card.Body>
-                        </Col>
-                        <Col xs={7}>
-                            <Card style={styleGraph}>
-                                <Line
-                                     data={{
-                                         labels:['1', '2', '3', '4', '5', '6','7', '8', '9', '10', '11', '12'],
-                                         datasets:[{
-                                             label:'Top Score',
-                                             data:['1', '2', '3', '4', '5', '6','7', '8', '9', '10', '11', '12'],
-                                             backgroundColor:[
-                                                'white'
-                                             ],
-                                             borderColor:[
-                                                'white'
-                                             ],
-                                             
-                                             borderWidth: 1
-                                            
-                                         },
-                                         {
-                                             label:'My Score',
-                                             data:['1',  '3', '4', '5', '6','7', '8', '9', '10', '11', '12','13'],
-                                             backgroundColor:[
-                                                 'purple'
-                                                ],
-                                                borderColor:[
-                                                    'purple'
-                                                ],
-                                            },
-                                            {
-                                                label:'Average Score',
-                                                data:['1', '4', '5', '6','7', '8', '9', '10', '11', '12','13','14'],
-                                                backgroundColor:[
-                                                    'white'
-                                                 ],
-                                                 borderColor:[
-                                                    'white'
-                                                 ]
-                                            },
-                                        ]
-                                     }}                             
-                                     Height={400}
-                                     width={600} 
-                                     options={{
-                                         maintainAspectRatio:false,
-                                         scales: {
-                                            y: {
-                                               title: true,
-                                               Text:' #time passed'
-                                            }
-                                        }
-                                     }}  
-        
-                                />
-
-                            </Card>
-                        </Col>
-                    </Row>
-                </Card>
-            </Container>
+        <div style={{ }}>
+            <ReactApexCharts 
+                options={options}
+                series={data}
+                type="area"
+                height={185}                
+            />
         </div>
-    );
+    )
 }
 
-export default StatsGraph;
+export default StatsGraph
