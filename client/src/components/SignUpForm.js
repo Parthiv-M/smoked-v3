@@ -163,7 +163,7 @@ const Forms2=({vals,clicks2,valset})=>{
 
         <form class="py-4 px-5  text-white" style={{backgroundColor:"#251D1D",borderRadius:"10px",width:"30%" ,opacity:"90%"}}>
 
-            <h1 className="head text-white text-center">SignUp</h1>
+            <h1 className="head text-white text-center">Sign<b className="bold" style={{color:"#7027CE"}}>Up</b></h1>
 
             <div class="form-group ">
                 <label >User name</label>
