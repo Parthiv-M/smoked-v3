@@ -7,6 +7,7 @@ import Dummy from "./components/Dummy"
 import Credits from "./components/Credits"
 import groundZero from './components/GroundZero';
 import Side from "./components/Sidetrial"
+import Signup from './components/SignUpForm';
 
 
 var __html = require("./pages/entry.html");
@@ -23,7 +24,7 @@ function App() {
             
               <span dangerouslySetInnerHTML={template}></span>
             </Route>
-            <Route exact path="/sidebar" component={Side}></Route>
+            <Route exact path="/signups" component={Signup}></Route>
             {
               routes.map((route) => (
                 <AppRoute
