@@ -1,0 +1,43 @@
+.form-box {
+    width: 30%;
+    background-color: rgba(37, 29, 29, 0.7);
+    text-align: left;
+}
+
+.label {
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.textfield {
+    height: 50px;
+    padding: 10px!important;
+    background-color: rgba(0, 0, 0, 0.4)!important;
+    border-radius: 0!important;
+    border: none!important;
+    color: white!important;
+}
+
+.textfield:focus+.underline {
+    transform: scale(1);
+}
+
+.underline {
+    background-color: var(--primary-color);        
+    height: 4px;
+    display: block;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    width: 100%;
+}
+  
+
+@media only screen and (max-width: 812px) {
+    .form-box {
+        width: 97%;
+    }
+}

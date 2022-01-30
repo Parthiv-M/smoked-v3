@@ -30,10 +30,18 @@ body {
 
 body {
   background-color: #0F0E0E!important;
+  font-family: "Lora", serif;
+  font-weight: 100;
 }
 
-button:focus {
-  outline: none
+button:focus, button:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+input:focus, input:active {
+  outline: none !important;
+  box-shadow: none;
 }
 
 .lora-bold {
@@ -44,4 +52,16 @@ button:focus {
 .lora-regular {
   font-family: "Lora", serif;
   font-weight: 100;
+}
+
+/* smoked logo */
+
+.smoked {
+  height: 100px;
+}
+
+@media only screen and (max-width: 812px) {
+  .smoked {
+      height: 50px;
+  }
 }

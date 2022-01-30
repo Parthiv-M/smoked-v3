@@ -1,7 +1,7 @@
 import React, { useEffect, useParams } from "react";
 import GameArea from "../components/GameArea";
 import GroundZero from "../components/GroundZero";
-import MainSideBar from "../components/MenuSideBar";
+import MainSideBar from "../components/MenuSideBar/MenuSideBar";
 import ProfileBar from "../components/ProfileBar";
 import video from "./../assets/smoked_back.mp4"
 import smoked from "./../assets/smoked_logo.png"

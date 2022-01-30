@@ -6,6 +6,7 @@ import SignInPage from "./../pages/SignIn";
 import ResetPassword from "./../pages/ResetPassword";
 import GamePage from "./../pages/GamePage";
 import TeamPage from "./../pages/TeamPage";
+import LandingPage from "../pages/LandingPage";
 
 const routes = [  
   {
@@ -35,7 +36,7 @@ const routes = [
   },
   {
     path:'/',
-    component: SignUpPage,
+    component: LandingPage,
     isPrivate: false
   },
 ]

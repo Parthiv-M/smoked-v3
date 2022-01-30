@@ -1,5 +1,5 @@
 import React from "react";
-import TeamMemberCard from "../components/TeamMemberCard";
+import TeamMemberCard from "../components/TeamMemberCard/TeamMemberCard";
 import mist from "./../assets/logoLight.png";
 import { Link } from "react-router-dom";
 import { board } from "./../constants/board"
