@@ -14,11 +14,16 @@ const SignInPage = () => {
 
     // function to check for empty text fields
     const checkEmptyFields = () => {
+        if(vals.email=="" || vals.password=="")
+        {
+            alert("Fields can't be empty")
+        }
 
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        checkEmptyFields()
     }
 
     return(
