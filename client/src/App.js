@@ -5,6 +5,10 @@ import AppRoute from "./AppRoutes";
 import { SmokedProvider } from './context';
 import Dummy from "./components/Dummy"
 import "./styles/global.css"
+import LandingPage from './pages/LandingPage';
+import GamePage from './pages/GamePage';
+import GameArea from './components/GameArea';
+import GroundZero from './components/GroundZero';
 
 var __html = require("./pages/entry.html");
 var template = { __html: __html };
@@ -18,7 +22,7 @@ function App() {
             <Route exact path="/game/firstone">
               <span dangerouslySetInnerHTML={template}></span>
             </Route>
-            <Route exact path="/dummy" component={Dummy}></Route>
+            <Route exact path="/gamepage" component={GamePage}></Route>
             {
               routes.map((route) => (
                 <AppRoute

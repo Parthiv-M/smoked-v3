@@ -37,9 +37,9 @@ const LandingPage = () => {
                         <p className="mx-1 text-white lora-regular"><span style={{ fontSize: "2rem", color: "#7027CE" }}>06</span> seconds</p>
                     </div>
                 </div>
-                <div className="col-md-4 col-12 h-full bg-dark">k</div>
+                {/* <div className="col-md-4 col-12 h-full bg-dark">k</div> */}
             </div>
-        </div >
+        </div>
     );
 }
 

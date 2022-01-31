@@ -2,7 +2,7 @@ import React from "react"
 import styles from "./../forms.module.css"
 import { Link } from "react-router-dom"
 
-const Forms1 = ({ click, vals, valset }) => {
+const Forms1 = ({ click, vals, valset}) => {
 
     const stateUpdate = (input) => (e) => {
         valset(prevState => {
@@ -49,7 +49,7 @@ const Forms1 = ({ click, vals, valset }) => {
 }
 
 
-const Forms2 = ({ vals, clicks2, valset, handleSubmit }) => {
+const Forms2 = ({ vals, clicks2, valset, handleSubmit}) => {
 
     const stateUpdate = (input) => (e) => {
         valset(prevState => {
@@ -94,18 +94,58 @@ const SignUpForm = ({ state, click1, click2, vals, valset }) => {
 
     // function to check for matching passwords
     const checkPassMatch = () => {
+        if(vals.password!=vals.confPass)
+        {
+            console.log(vals.password + " ")
+            console.log(vals.confPass)
+            alert("passwords entered dont match")
+        }
+        else{
+            if(vals.password.length<8)
+            {
+                alert("password should be minimum 8 characters long")
+            }
+        }
+
 
     }
 
     // function to check for empty text fields
     const checkEmptyFields = () => {
+        for (let i in vals)
+        {
+            if(vals[i]=="")
+            {
+                alert("Fields cant be empty");
+                return true;
+            }
+           
+        }
+
+        return false
+       
+
+       
 
     }
+    
+
+       
 
     // function to handle sign up operation
     const handleSubmit = (e) => {
         e.preventDefault()
+        console.log("helo")
+       if (!checkEmptyFields())
+       {
+            checkPassMatch()
+       }
+     
+        
+        
     }
+
+ 
 
     switch(state) {
         case 0: 
