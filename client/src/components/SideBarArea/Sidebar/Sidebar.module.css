@@ -1,0 +1,15 @@
+.sidebar {
+  overflow: hidden;
+  width: 32%;
+  display: flex;
+  flex-flow: column nowrap;
+  transition-duration: 800ms;
+  transition-timing-function: ease-in-out;
+  background-color: #0F0E0E!important;
+}
+
+@media only screen and (max-width: 812px) {
+  .sidebar {
+    width: 90%
+  }
+}
