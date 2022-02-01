@@ -18,7 +18,7 @@ const GamePage = ({groundZeroComp}) => {
     return (
         <div className="pr-md-2 pr-0" style={{ overflow: "hidden" }}> 
             <SideBarArea />
-            <div className="position-absolute h-100 w-100" style={{ opacity: 0.7 }}>
+            <div className="position-fixed h-100 w-100" style={{ opacity: 0.7 }}>
                 <video id="video" className="h-100 w-100 position-absolute" style={{ objectFit: "cover" }} autoPlay muted loop>
                     <source src={video} type="video/mp4"></source>
                 </video>

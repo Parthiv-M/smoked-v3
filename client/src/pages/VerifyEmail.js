@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import incognito from './../assets/smoked_logo.png';
 import mist from "./../assets/logoLight.png";
 import video from "./../assets/smoked_back.mp4" ;
-import SignInForm from '../components/Forms/SignInForm/SignInForm';
+import VerifyEmailForm from '../components/Forms/VerifyEmailForm/VerifyEmailForm';
 
 
-const SignInPage = () => { 
+const VerifyEmail = () => { 
 
     const [vals,setVal] = useState({
         email: "",
-        password: ""
     })
 
     // function to check for empty text fields
@@ -33,13 +32,13 @@ const SignInPage = () => {
                 <img src={mist} alt="MIST" className="py-3" height={100} />  
             </div>
             <div className="pt-5">
-                <SignInForm vals={vals} valset={setVal} handleSubmit={handleSubmit}/>
+                <VerifyEmailForm vals={vals} valset={setVal} handleSubmit={handleSubmit}/>
             </div>
-            <p className="text-white my-1 lora-regular">Forgot your password? <a href="/reset" style={{ color: "#7027CE", textDecoration: "underline" }}>Reset Password</a></p>
             <p className="text-white my-1 lora-regular">Don't have an account? <a href="/signup" style={{ color: "#7027CE", textDecoration: "underline" }}>Sign Up</a></p>
+            <p className="text-white my-1 lora-regular">Already have an account? <a href="/signin" style={{ color: "#7027CE", textDecoration: "underline" }}>Sign In</a></p>
         </section>
     )
 }
 
 
-export default SignInPage;
+export default VerifyEmail;

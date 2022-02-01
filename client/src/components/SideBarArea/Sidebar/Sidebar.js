@@ -4,7 +4,7 @@ import styles from "./Sidebar.module.css"
 import Rules from "../../RulesItem/Rules"
 import LeaderBoard from "../../LeaderBoard/LeaderBoard"
 
-const Sidebar = ({handleSidebarClick, type}) => {
+const Sidebar = ({ handleSidebarClick, type }) => {
 
     const findComponent = () => {
         switch(type) {

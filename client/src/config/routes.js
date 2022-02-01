@@ -7,6 +7,8 @@ import ResetPassword from "./../pages/ResetPassword";
 import GamePage from "./../pages/GamePage";
 import TeamPage from "./../pages/TeamPage";
 import LandingPage from "../pages/LandingPage";
+import VerifyEmail from "../pages/VerifyEmail";
+import VerifyCode from "../pages/VerifyCode";
 
 const routes = [  
   {
@@ -27,6 +29,16 @@ const routes = [
   {
     path:'/reset',
     component: ResetPassword,
+    isPrivate: false
+  },
+  {
+    path:'/verify/email',
+    component: VerifyEmail,
+    isPrivate: false
+  },
+  {
+    path:'/verify/code',
+    component: VerifyCode,
     isPrivate: false
   },
   {

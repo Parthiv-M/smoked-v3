@@ -24,7 +24,7 @@ const SignInForm = ({ vals, valset, handleSubmit }) => {
                     <input type="password" className={`${styles.textfield} form-control shadow-none`} id="password" onChange={stateUpdate("password")}/>
                     <span className={`${styles.underline}`}></span>
                 </div>
-                <button type="submit" style={{ backgroundColor:"#7027CE" }} onClick={(e) => handleSubmit(e)} className="btn float-end text-white">Sign In</button>
+                <button type="submit" style={{ backgroundColor:"#7027CE", borderRadius: "1.5rem" }} onClick={(e) => handleSubmit(e)} className="btn px-4 float-end text-white">Sign In</button>
             </form>
         </div>
     )

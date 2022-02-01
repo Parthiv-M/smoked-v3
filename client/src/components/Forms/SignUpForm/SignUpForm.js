@@ -41,7 +41,7 @@ const Forms1 = ({ click, vals, valset }) => {
                         Back Home
                     </button>
                 </Link>
-                <button style={{ backgroundColor:"#7027CE" }} onClick={click} className="btn float-end text-white">Next</button>
+                <button style={{ backgroundColor:"#7027CE", borderRadius: "1.5rem" }} onClick={click} className="btn px-4 float-end text-white">Next</button>
             </form>
         </div>
     )
@@ -84,7 +84,7 @@ const Forms2 = ({ vals, clicks2, valset, handleSubmit }) => {
                     <span className={`${styles.underline}`}></span>
                 </div>
                 <button onClick={clicks2} className="btn bg-black text-white">Previous</button>
-                <button type="submit" style={{ backgroundColor:"#7027CE" }} onClick={(e) => handleSubmit(e)} className="btn float-end text-white">Signup</button>
+                <button type="submit" style={{ backgroundColor:"#7027CE", borderRadius: "1.5rem" }} onClick={(e) => handleSubmit(e)} className="btn px-4 float-end text-white">Signup</button>
             </form>
         </div>
     )

@@ -29,7 +29,7 @@ const SignUpPage = () => {
 
     return(
         <section className="min-vh-100 min-vw-100 text-center" style={{ overflow:"hidden" }}>
-            <div className="h-100 w-100 position-absolute" style={{ opacity: 0.3, zIndex: -100 }}>
+            <div className="h-100 w-100 position-fixed" style={{ opacity: 0.3, zIndex: -100 }}>
                 <video id="video" className="h-100 w-100" style={{ objectFit: "cover" }} autoPlay muted loop>
                     <source src={video} type="video/mp4"></source>
                 </video>
@@ -38,7 +38,7 @@ const SignUpPage = () => {
                 <img src={incognito} alt="Inognito" className="py-4" height={100} />
                 <img src={mist} alt="MIST" className="py-3" height={100} />  
             </div>
-            <div className="pt-5">
+            <div className="pt-3">
                 <SignUpForm click1={nextClick} click2={prevClick} vals={vals} valset={setVal} state={Num}/>
                 <p className="text-white my-1 lora-regular">Already have an account? <a href="/signin" style={{ color: "#7027CE", textDecoration: "underline" }}>Sign In</a></p>
             </div>

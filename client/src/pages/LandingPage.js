@@ -7,7 +7,7 @@ import video from "./../assets/smoked_back.mp4" ;
 const LandingPage = () => {
     return (
         <div className="h-100 w-100 d-flex flex-column">
-            <div className="h-100 w-100 position-absolute" style={{ opacity: 0.3, zIndex: -100 }}>
+            <div className="h-100 w-100 position-fixed" style={{ opacity: 0.3, zIndex: -100 }}>
                 <video id="video" className="h-100 w-100 position-absolute" style={{ objectFit: "cover" }} autoPlay muted loop>
                     <source src={video} type="video/mp4"></source>
                 </video>
