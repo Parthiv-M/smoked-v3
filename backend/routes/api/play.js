@@ -1,6 +1,8 @@
 const express = require('express');
 const authenticate = require('../../middleware/authenticate');
 const Question = require('../../models/Question');
+const User = require("./../../models/User");
+
 const router = express.Router();
 const _ = require("lodash");
 
@@ -26,10 +28,51 @@ router.get("/level/:num", authenticate, async (req, res) => {
     }
 });
 
+//route to submit answer
+
+router.get("/level/:num/:ans",authenticate,async(req,res)=>{
+    const levelNum = req.params.num;
+    const ans=req.params.ans;
+    const username=req.body.username
+    var score=req.body.score
+    var level=req.body.level
+    try {
+        const question = await Question.find({ level: levelNum });
+        
+        // check if the question exists
+        if(!question) {
+            return res.status(400).send({ success: false, message: "No such level" });
+        }
+        var points=question.points
+        score=score+points
+
+        if(question.answer==ans)
+        {
+            level=level+1;
+            await User.findOneAndUpdate({userName:username},{score:score,level:level});
+            const us=User.findOne({username:username})
+            const userdetails={
+                
+                username:us.userName,
+                score:us.score,
+                level:us.currLevel
+
+         
+        }
+            res.status(200).json({success:true,message:"Correct answer",userdetails:userdetails});
+        }
+        
+    } catch (error) {
+        res.status(500).send({ success: false, message: "Oops, server error" });
+    }
+
+})
+
 // route to get the hints for a particular level
 router.get("/hints/:num", authenticate, async (req, res) => {
     
     const levelNum = req.params.num;
+    console.log(levelNum)
 
     try {
         const question = await Question.find({ level: levelNum });

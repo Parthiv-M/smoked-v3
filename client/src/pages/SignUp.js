@@ -10,10 +10,10 @@ const SignUpPage = () => {
     const [Num,setNum] = useState(0);
     const [vals,setVal] = useState({
         name: "",
-        learner: "",
-        reg: "",
+        email: "",
+        registrationNum: "",
         college: "",
-        username: "",
+        userName: "",
         contact: "",
         password: "",
         confPass: ""
@@ -21,6 +21,7 @@ const SignUpPage = () => {
 
    const nextClick = () => {
         setNum(1);
+        
     }
     
     const prevClick = () => {

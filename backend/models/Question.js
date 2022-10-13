@@ -7,6 +7,10 @@ const Question = new Schema({
         required: true,
         unique: true
     },
+    answer:{
+        type:String
+
+    },
     image: {
         type: String   
     },

@@ -16,7 +16,7 @@ const SignInForm = ({ vals, valset, handleSubmit }) => {
                 <div className="form-group ">
                     <label className={`lora-regular ${styles.label}`}>Email ID</label>
                     <p className="mb-2" style={{ fontSize: "0.8rem", color: "#7a5e5e" }}>Enter the regstered email ID</p>
-                    <input type="text" className={`${styles.textfield} form-control shadow-none`} id="username" onChange={stateUpdate("username")} placeholder={vals.username}/>
+                    <input type="text" className={`${styles.textfield} form-control shadow-none`} id="username" onChange={stateUpdate("email")} placeholder={vals.username}/>
                     <span className={`${styles.underline}`}></span>
                 </div>
                 <div className="form-group">

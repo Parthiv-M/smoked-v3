@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import incognito from './../assets/smoked_logo.png';
 import mist from "./../assets/logoLight.png";
 import video from "./../assets/smoked_back.mp4" ;
 import SignInForm from '../components/Forms/SignInForm/SignInForm';
+import axios from 'axios';
+import { SmokedProvider } from '../context';
+import { useSmokedDispatch } from '../context';
+import { useSmokedState } from '../context';
+import { useHistory} from 'react-router-dom';
+
 
 
 const SignInPage = () => { 
+    const context=useSmokedState()
+    const dispatch=useSmokedDispatch()
+    const navigate=useHistory()
 
     const [vals,setVal] = useState({
         email: "",
@@ -21,9 +30,35 @@ const SignInPage = () => {
 
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault()
         checkEmptyFields()
+        await axios.post('/api/user/signin',vals).then(async (res)=>{
+            console.log(res.headers);
+            var str="x-auth-token"
+            localStorage.setItem('token', res.headers.token);
+            let token = localStorage.getItem("token")
+            const userdetails={
+                username:res.data.userdetails.username,
+                level:res.data.userdetails.level,
+                score:res.data.userdetails.score,
+                token:token
+            }
+            // localStorage.setItem('userdata',userdetails);
+            localStorage.setItem('username', res.data.userdetails.username);
+            localStorage.setItem('level', res.data.userdetails.level);
+            localStorage.setItem('score', res.data.userdetails.score);
+            console.log(userdetails)
+            console.log(token)
+            await dispatch({type:'set',payload:userdetails});
+            console.log(context);
+            navigate.push("/gamepage")
+
+            
+          })
+        
+        
+        
     }
 
     return(

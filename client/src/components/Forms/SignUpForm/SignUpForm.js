@@ -1,6 +1,8 @@
 import React from "react"
 import styles from "./../forms.module.css"
 import { Link } from "react-router-dom"
+import axios from "axios"
+import { signUpUser } from "../../../context"
 
 const Forms1 = ({ click, vals, valset}) => {
 
@@ -22,13 +24,13 @@ const Forms1 = ({ click, vals, valset}) => {
                 <div className="form-group">
                     <label for="learner" className={`lora-regular ${styles.label}`}>Learner ID</label>
                     <p className="mb-2" style={{ fontSize: "0.8rem", color: "#7a5e5e" }}>If you do not have a college learner ID, please enter a valid email address</p>
-                    <input type="text" className={`${styles.textfield} form-control shadow-none`} id="learner" onChange={stateUpdate("learner")} placeholder={vals.learner}/>
+                    <input type="text" className={`${styles.textfield} form-control shadow-none`} id="learner" onChange={stateUpdate("email")} placeholder={vals.learner}/>
                     <span className={`${styles.underline}`}></span>
                 </div>
                 <div className="form-group">
                     <label for="reg" className={`lora-regular ${styles.label}`}>Registration Number</label>
                     <p className="mb-2" style={{ fontSize: "0.8rem", color: "#7a5e5e" }}>College Registration Number or ID</p>
-                    <input type="text" className={`${styles.textfield} form-control shadow-none`} id="reg" onChange={stateUpdate("reg")} placeholder={vals.reg}/>
+                    <input type="text" className={`${styles.textfield} form-control shadow-none`} id="reg" onChange={stateUpdate("registrationNum")} placeholder={vals.reg}/>
                     <span className={`${styles.underline}`}></span>
                 </div>
                 <div className="form-group">
@@ -64,7 +66,7 @@ const Forms2 = ({ vals, clicks2, valset, handleSubmit}) => {
                 <div className="form-group ">
                     <label className={`lora-regular ${styles.label}`}>Username</label>
                     <p className="mb-2" style={{ fontSize: "0.8rem", color: "#7a5e5e" }}>Pick a unique username for yourself</p>
-                    <input type="text" className={`${styles.textfield} form-control shadow-none`} id="username" onChange={stateUpdate("username")} placeholder={vals.username}/>
+                    <input type="text" className={`${styles.textfield} form-control shadow-none`} id="username" onChange={stateUpdate("userName")} placeholder={vals.username}/>
                     <span className={`${styles.underline}`}></span>
                 </div>
                 <div className="form-group">
@@ -94,24 +96,28 @@ const SignUpForm = ({ state, click1, click2, vals, valset }) => {
 
     // function to check for matching passwords
     const checkPassMatch = () => {
+        var flag=true
         if(vals.password!=vals.confPass)
         {
             console.log(vals.password + " ")
             console.log(vals.confPass)
             alert("passwords entered dont match")
+            flag=false
         }
         else{
             if(vals.password.length<8)
             {
                 alert("password should be minimum 8 characters long")
+                flag =false
             }
         }
-
+        return flag;
 
     }
 
     // function to check for empty text fields
     const checkEmptyFields = () => {
+        console.log(vals)
         for (let i in vals)
         {
             if(vals[i]=="")
@@ -133,12 +139,17 @@ const SignUpForm = ({ state, click1, click2, vals, valset }) => {
        
 
     // function to handle sign up operation
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault()
         console.log("helo")
        if (!checkEmptyFields())
        {
-            checkPassMatch()
+            if(checkPassMatch()){
+                await axios.post('/api/user/signup',vals).then((res)=>{
+                    console.log(res.data.message);
+                  })
+                
+            }
        }
      
         

@@ -18,7 +18,7 @@ const GroundZero = () => {
                 </div>
                 <div className="d-flex align-items-center px-2">
                     <div className="bg-white d-md-block d-none" style={{ height: 2, width: "5%" }}></div>
-                    <p className="my-auto mx-2 lora-regular text-white" style={{ fontSize: "1.7rem", minWidth: "fit-content" }}>Smoked 01</p>
+                    <p className="my-auto mx-2 lora-regular text-white" style={{ fontSize: "1.7rem", minWidth: "fit-content" }}>Smoked 00</p>
                     <div className="bg-white" style={{ height: 2, width: "75%" }}></div>
                 </div>
                 <p className="text-white my-5 px-3" style={{ fontSize: "1.5rem" }}>

@@ -12,13 +12,15 @@ router.post("/signUp",
     [
         check('email', 'Enter a valid email').isEmail().normalizeEmail(),
         check('password', 'Password is required').exists().isLength({ min: 4, max: 10 }),
-        check('userName', 'Username is required').exists().isLength({ min: 4, max: 10 })
+        check('userName', 'Username is required').exists().isLength({ min: 4, max: 12 })
     ],
 
     async (req, res) => {
 
     // checks for validation result
     const errors = validationResult(req);
+    console.log("got req");
+    console.log(errors);
     
     if(!errors.isEmpty()){
         return res.status(400).json({ errors: errors.array() });
@@ -52,10 +54,12 @@ router.post("/signUp",
                 }
             };
             token = user.generateAuthToken(payload);
+            console.log(token);
             res.setHeader('x-auth-token', token);
             res.status(200).send({ message: "Sign up successful" });
         }).catch((err) => {
             res.status(403).json({ errors: [err] });
+            console.log(err)
         })    
     } catch (err) {
         res.status(500).send({ error: 'Server error' });
@@ -71,6 +75,7 @@ router.post("/signIn",
     async (req, res) => {
         // checks for validation result
         const errors = validationResult(req);
+        console.log(errors)
         
         if(!errors.isEmpty()){
             return res.status(400).json({ errors: errors.array() });
@@ -101,10 +106,18 @@ router.post("/signIn",
                   userName: user.userName
                 }
             };
+            const userdetails={
+                
+                    username:user.userName,
+                    score:user.score,
+                    level:user.currLevel
+
+             
+            }
 
             token = user.generateAuthToken(payload);
-            res.setHeader('x-auth-token', token);
-            res.status(200).send({ success: true, message: "Login successful" });
+            res.setHeader('token', token);
+            res.status(200).send({ success: true, message: "Login successful",userdetails:userdetails});
         } catch (error) {
             res.status(500).send({ success: false, message: 'Oops, server error' });
         }
